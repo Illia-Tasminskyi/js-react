@@ -1,11 +1,5 @@
-function fbf() {
-    console.log();
+if(1 == true && 0 == false) {
+    console.log('true');
+}else {
+    console.log('false');
 }
-
-function fbf() {
-    console.log();
-}
-
-
-const test = 5;
-const tess = 55;
