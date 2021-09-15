@@ -1,5 +1,9 @@
-if(1 == true && 0 == false) {
-    console.log('true');
-}else {
-    console.log('false');
+let num;
+
+function test() {
+   num = 10;
 }
+
+test();
+
+console.log(num);
