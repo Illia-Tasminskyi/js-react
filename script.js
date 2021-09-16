@@ -1,18 +1,26 @@
 "use strict";
 
-function f1() {
-  console.log("1");
+let obj = {
+  name: "illia",
+  age: "18",
+  city: "Krem...",
+  color: {
+    bg1: "red",
+    bg2: "green",
+  },
+};
+
+const {bg1, bg2} = obj.color;
+
+console.log(bg1);
+
+for (let key in obj) {
+  if (typeof obj[key] == "object") {
+    for (let i in obj[key]) {
+      console.log(`Ключ - |${i}| имеет значание - |${obj[key][i]}|`);
+    }
+  } else {
+    console.log(`Ключ - |${key}| имеет значание - |${obj[key]}|`);
+  }
 }
-
-function f2(callback1, callback3) {
-  console.log("2");
-  callback1();
-  callback3();
-}
-
-function f3() {
-   console.log("3");
-}
-
-
-f2(f1, f3);
+console.log(Object.keys(obj).length);
