@@ -1,9 +1,12 @@
-let num;
+"use strict";
 
-function test() {
-   num = 10;
+let text;
+
+function start() {
+   while(text == '' || text == null || isNaN(text)) {
+      text = +prompt('Сколько тебе лет?', '');
+   }
+   alert(text);
 }
 
-test();
-
-console.log(num);
+start();
