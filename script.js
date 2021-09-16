@@ -1,26 +1,26 @@
 "use strict";
 
-let obj = {
-  name: "illia",
-  age: "19",
-  city: "Krem...",
-  color: {
-    bg1: "red",
-    bg2: "green",
-  },
+console.log('----------------------------------');
+
+let arr = [6, 14, 3, 22, 5, 1];
+
+let mySort = function (a, b) { // сортировка для .sort
+   return a - b;
 };
+arr.sort(mySort);
 
-const {bg1, bg2} = obj.color;
+// arr.pop(6);
+arr.push('Hi');
 
-console.log(bg1);
 
-for (let key in obj) {
-  if (typeof obj[key] == "object") {
-    for (let i in obj[key]) {
-      console.log(`Ключ - |${i}| имеет значание - |${obj[key][i]}|`);
-    }
-  } else {
-    console.log(`Ключ - |${key}| имеет значание - |${obj[key]}|`);
-  }
+for (let velue of arr) {
+   console.log(velue);
 }
-console.log(Object.keys(obj).length);
+
+console.log('----------------------------------');
+
+arr.forEach(function (item, i, arr) {
+   console.log(`${i}: ${item} --- ${arr.length}`);
+});
+
+console.log('----------------------------------');
